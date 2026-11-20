@@ -29,7 +29,7 @@ class Customer {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Customer other = (Customer) obj;
+		Customer2 other = (Customer2) obj;
 		return customerId == other.customerId;
 	}
 
@@ -43,16 +43,16 @@ class Customer {
 public class Test5 {
 
 	public static void main(String[] args) {
-		HashSet<Customer> customers = new HashSet<Customer>();
-		Customer customer = new Customer(101, "Sachin Kumar", "sachin@018gmail.com");
-		Customer customer1 = new Customer(101, "Sachin Kumar", "sachin@018gmail.com");
-		Customer customer2 = new Customer(101, "Sachin Kumar", "sachin@018gmail.com");
-		Customer customer3 = new Customer(101, "Sachin Kumar", "sachin@018gmail.com");
+		HashSet<Customer2> customers = new HashSet<Customer2>();
+		Customer2 customer = new Customer2(101, "Sachin Kumar", "sachin@018gmail.com");
+		Customer2 customer1 = new Customer2(101, "Sachin Kumar", "sachin@018gmail.com");
+		Customer2 customer2 = new Customer2(101, "Sachin Kumar", "sachin@018gmail.com");
+		Customer2 customer3 = new Customer2(101, "Sachin Kumar", "sachin@018gmail.com");
 
 		System.out.println(customers);
-		Iterator<Customer> itr = customers.iterator();
+		Iterator<Customer2> itr = customers.iterator();
 		while (itr.hasNext()) {
-			Customer custom = itr.next();
+			Customer2 custom = itr.next();
 			System.out.println(custom);
 		}
 	}

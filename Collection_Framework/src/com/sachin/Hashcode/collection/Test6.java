@@ -5,13 +5,13 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
-class Customer {
+class Customer2 {
 
 	private final int customerId;
 	private final String customerName;
 	private final String email;
 
-	public Customer(int customerId, String customerName, String email) {
+	public Customer2(int customerId, String customerName, String email) {
 		this.customerId = customerId;
 		this.customerName = customerName;
 		this.email = email;
