@@ -29,7 +29,7 @@ public class OrderService {
 
 	private CartRepository cartRepository = new CartRepository();
 
-	private ProductRepository productRepository = new ProductRepository(); 
+	private ProductRepository productRepository = new ProductRepository();
 
 	// Place Order
 	public void placeOrder(int customerId) throws SQLException {
@@ -685,7 +685,7 @@ public class OrderService {
 		Orders order = orders.stream().filter(o -> o.getOrderId() == orderId).findFirst()
 				.orElseThrow(() -> new OrderNotFoundException("Order not found with ID: " + orderId));
 
-		// 5. Get order items 
+		// 5. Get order items
 		List<OrderItem> items = orderRepository.getOrderItemsByOrderId(orderId);
 
 		// 6. Display order details
