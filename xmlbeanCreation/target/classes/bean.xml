@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Payment Service Bean -->
+	<bean id="paymentService"
+		class="com.xmlbeanCreation.service.PaymentService">
+
+		<property name="paymentMode" value="UPI" />
+
+	</bean>
+
+
+	<!-- Inventory Service Bean -->
+	<bean id="inventoryService"
+		class="com.xmlbeanCreation.service.InventryService">
+
+		<property name="availableStock" value="100" />
+
+	</bean>
+
+
+	<!-- Order Service Bean -->
+	<bean id="orderService"
+		class="com.xmlbeanCreation.service.OrderService">
+
+		<!-- Inject Payment Service -->
+		<property name="paymentService" ref="paymentService" />
+
+		<!-- Inject Inventory Service -->
+		<property name="inventryService" ref="inventoryService" />
+
+		<!-- Configure Order Details -->
+		<property name="customerName" value="Sachin" />
+
+		<property name="orderAmount" value="2500" />
+
+		<property name="quantity" value="2" />
+
+	</bean>
+
+
+</beans>
